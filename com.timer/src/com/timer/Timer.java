@@ -7,8 +7,9 @@ import java.util.GregorianCalendar;
  * @autor MSFATA
  * */
 public class Timer {
-	public static String time;
-	public static String amPm;
+	private static String time;
+	private static String amPm;
+	private static String date;
 
 	// returns only time
 	public static String getTime() {
@@ -34,7 +35,6 @@ public class Timer {
 
 					}
 					time = hour + ":" + min + ":" + sec + " " + amPm;
-					System.out.println(time);
 				}
 			}
 		}.start();
@@ -47,7 +47,7 @@ public class Timer {
 		int year = cal.get(Calendar.YEAR);
 		int month = cal.get(Calendar.MONTH);
 		int day = cal.get(Calendar.DAY_OF_MONTH);
-		time = "" + day + "/" + (month + 1) + "/" + year;
-		return time;
+		date = "" + day + "/" + (month + 1) + "/" + year;
+		return date;
 	}
 }
